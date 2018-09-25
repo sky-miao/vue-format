@@ -5,10 +5,14 @@ import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 import store from './store/index.js'
+// // 引入Element
+import { Button } from 'element-ui'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuex)
+
+Vue.use(Button)
 
 /* eslint-disable no-new */
 new Vue({

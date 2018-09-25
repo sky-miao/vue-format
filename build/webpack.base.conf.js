@@ -38,6 +38,9 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  // 配置引用的库
+  externals: {
+  },
   module: {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
