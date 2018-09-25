@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 import store from './store/index.js'
+import i18n from './local/index.js'
 // // 引入Element
 import { Button } from 'element-ui'
 
@@ -19,6 +20,7 @@ new Vue({
   el: '#app',
   router,
   store,
+  i18n,
   components: { App },
   template: '<App/>'
 })
