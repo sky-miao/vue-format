@@ -90,10 +90,17 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  computed: {
+    one () {
+      return this.$store.state.one.one
+    }
+  },
+  mounted () {
+    console.log(this.one, '1111')
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
