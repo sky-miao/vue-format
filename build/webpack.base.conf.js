@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const webpack = require('webpack')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -40,7 +41,13 @@ module.exports = {
   },
   // 配置引用的库
   externals: {
+    // 'mock': 'mock',
+    // 'moment': 'moment'
   },
+  // 增加plugins
+  plugins: [
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 50000})  // 合并低于50K的小文件
+  ],
   module: {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),

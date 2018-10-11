@@ -8,6 +8,7 @@ import store from './store/index.js'
 import i18n from './local/index.js'
 // // 引入Element
 import { Button } from 'element-ui'
+process.env.MOCK && require('@/mock/index.js')
 
 Vue.config.productionTip = false
 
