@@ -20,4 +20,4 @@ const homeList = function () {
 }
 // exchange data
 // 拦截请求返回假数据
-Mock.mock(ApiPath.homeUrl, 'get', homeList)
+Mock.mock(ApiPath.homeUrl, 'GET', homeList)

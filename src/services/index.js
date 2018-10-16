@@ -1,9 +1,9 @@
-
 import {
   GET, POST
 } from '@/utils/request.js'
 import config from '@/utils/config'
 const { BaseURL, ApiPath } = config
+
 // 获取新闻列表
 export function getHomeList (params, options) {
   let url = ApiPath.homeUrl
