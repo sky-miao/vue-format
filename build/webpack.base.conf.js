@@ -25,6 +25,13 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  // 配置引用的库
+  externals: {
+    // key: 第三方库， value: 项目中的别名
+    // 'mock': 'mock',
+    // 'moment': 'moment'
+    'axios': 'axios'
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -38,11 +45,6 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
-  },
-  // 配置引用的库
-  externals: {
-    // 'mock': 'mock',
-    // 'moment': 'moment'
   },
   // 增加plugins
   plugins: [

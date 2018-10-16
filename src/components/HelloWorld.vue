@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import { getHomeList } from '@/services/index.js'
 export default {
   name: 'HelloWorld',
   data () {
@@ -80,7 +81,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.one, '1111')
+    getHomeList()
   }
 }
 </script>
